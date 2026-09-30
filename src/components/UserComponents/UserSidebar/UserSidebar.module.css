@@ -1,0 +1,333 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 240px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 16px 18px;
+    overflow-y: auto;
+    background: #211a15;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    color: #f7eee4;
+}
+
+.topArea {
+    padding: 0 7px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 2px 4px;
+}
+
+.logoIcon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #b87942;
+    color: #fffaf4;
+    box-shadow: 0 8px 20px rgba(184, 121, 66, 0.2);
+}
+
+.brandText {
+    min-width: 0;
+}
+
+.brandText h2 {
+    margin: 0;
+    color: #fffaf4;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.brandText span {
+    display: block;
+    margin-top: 4px;
+    color: #a99a8d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.userCard {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 27px;
+    padding: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.avatar {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #ead3bc;
+    color: #5d3b22;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.userDetails {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcomeText {
+    margin-bottom: 3px;
+    color: #9d8e81;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.userDetails strong {
+    overflow: hidden;
+    color: #f7eee4;
+    font-size: 13px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navigation {
+    flex: 1;
+    margin-top: 32px;
+}
+
+.navGroup + .navGroup {
+    margin-top: 28px;
+}
+
+.groupTitle {
+    display: block;
+    margin: 0 12px 9px;
+    color: #86776b;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.navLink,
+.activeLink {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 46px;
+    padding: 0 13px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.navLink {
+    color: #b8aaa0;
+}
+
+.navLink svg,
+.activeLink svg {
+    flex-shrink: 0;
+}
+
+.navLink span,
+.activeLink span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.navLink:hover {
+    background: rgba(255, 255, 255, 0.055);
+    color: #fff7ef;
+    transform: translateX(2px);
+}
+
+.activeLink {
+    background: #b87942;
+    color: #fffaf5;
+    box-shadow: 0 7px 20px rgba(184, 121, 66, 0.16);
+}
+
+.activeLink::before {
+    position: absolute;
+    left: -16px;
+    width: 3px;
+    height: 20px;
+    border-radius: 0 5px 5px 0;
+    background: #d7a46f;
+    content: '';
+}
+
+.cartBadge {
+    min-width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0 6px;
+    border-radius: 20px;
+    background: #fff4e8;
+    color: #8b572f;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+.activeLink .cartBadge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.bottomArea {
+    margin-top: 25px;
+}
+
+.storeButton {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+    color: #e9ddd2;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.storeButton:hover {
+    border-color: rgba(184, 121, 66, 0.35);
+    background: rgba(184, 121, 66, 0.09);
+    transform: translateY(-1px);
+}
+
+.storeIcon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: rgba(184, 121, 66, 0.16);
+    color: #d19a65;
+}
+
+.storeButton > span:last-child {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.storeButton small {
+    color: #817267;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.storeButton strong {
+    margin-top: 2px;
+    color: #e9ddd2;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.logoutButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 9px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 11px;
+    background: transparent;
+    color: #9e9187;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.logoutButton:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f0ddd0;
+}
+
+.sidebarFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 17px;
+    padding: 0 5px;
+    color: #62574f;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #51443a;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 215px;
+    }
+
+    .brandText h2 {
+        font-size: 19px;
+    }
+
+    .navLink,
+    .activeLink {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        display: none;
+    }
+}

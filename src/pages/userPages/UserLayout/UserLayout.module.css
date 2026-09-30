@@ -1,0 +1,45 @@
+.userLayout {
+    min-height: 100vh;
+    background: #f7f3ed;
+}
+
+.contentArea {
+    min-height: 100vh;
+    margin-left: 240px;
+    background: #f7f3ed;
+}
+
+.mainContent {
+    width: 100%;
+    max-width: 1280px;
+    min-height: calc(100vh - 72px);
+    margin: 0 auto;
+    padding: 30px 34px 50px;
+}
+
+@media (max-width: 1200px) {
+    .mainContent {
+        padding: 28px 26px 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contentArea {
+        margin-left: 215px;
+    }
+
+    .mainContent {
+        padding: 26px 22px 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .contentArea {
+        margin-left: 0;
+    }
+
+    .mainContent {
+        max-width: 100%;
+        padding: 20px 16px 35px;
+    }
+}

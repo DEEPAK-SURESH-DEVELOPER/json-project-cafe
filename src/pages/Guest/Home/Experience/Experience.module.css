@@ -1,0 +1,457 @@
+.experience {
+    position: relative;
+    width: 100%;
+    background: #17120f;
+    color: #fffaf2;
+    overflow: clip;
+}
+
+.intro {
+    width: min(1400px, 88%);
+    margin: 0 auto;
+    padding: 130px 0 90px;
+    display: grid;
+    grid-template-columns: 0.32fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.introLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: #a99b8d;
+}
+
+.introLabel span:first-child {
+    color: #c89b5c;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.introLabel span:last-child {
+    padding-top: 3px;
+}
+
+.introContent {
+    max-width: 900px;
+}
+
+.smallText {
+    display: block;
+    margin-bottom: 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: #c89b5c;
+}
+
+.introContent h2 {
+    max-width: 900px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.2rem, 6vw, 6.5rem);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -0.045em;
+}
+
+.introContent h2 em {
+    color: #c89b5c;
+    font-weight: 400;
+}
+
+.description {
+    max-width: 500px;
+    margin: 32px 0 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #bdaea0;
+}
+
+/* Scroll Expand */
+
+.expandWrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 620px;
+    background: #17120f;
+}
+
+.expandWrapper :global(.scroll-expand) {
+    width: 100%;
+    height: 100%;
+}
+
+.expandWrapper :global(.scroll-expand__stage) {
+    background: #17120f;
+}
+
+.expandWrapper :global(.scroll-expand__frame) {
+    background: #211915;
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.35);
+}
+
+.expandWrapper :global(.scroll-expand__media) {
+    object-position: center;
+}
+
+.expandWrapper :global(.scroll-expand__title) {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 7%;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5.8vw, 5.8rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    color: #fffaf2;
+    text-align: center;
+    text-wrap: balance;
+    text-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+}
+
+.expandWrapper :global(.scroll-expand__hint) {
+    bottom: 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 250, 242, 0.75);
+}
+
+/* Image Overlay */
+
+.imageContent {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 42px;
+    color: #fffaf2;
+}
+
+.imageTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.imageCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imageLabel {
+    margin-bottom: 16px;
+    color: #f1c18c;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.imageCenter h3 {
+    max-width: 700px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 6rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    text-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
+}
+
+.imageCenter p {
+    margin: 20px 0 25px;
+    color: rgba(255, 250, 242, 0.82);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+}
+
+.imageButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 21px;
+    border: 1px solid #e7b77d;
+    border-radius: 999px;
+    background: #e7b77d;
+    color: #382317;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.imageButton:hover {
+    transform: translateY(-3px);
+    background: #fff0dc;
+    color: #382317;
+}
+
+.imageButton:focus-visible {
+    outline: 3px solid #fff8ed;
+    outline-offset: 5px;
+}
+
+.imageBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 250, 242, 0.3);
+}
+
+.imageBottom span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+/* Bottom Statement */
+
+.bottomStatement {
+    width: min(1400px, 88%);
+    margin: 0 auto;
+    padding: 120px 0 145px;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.65fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.statementNumber {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: #c89b5c;
+}
+
+.statementText > span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #8e8074;
+}
+
+.statementText h3 {
+    margin: 18px 0 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.7rem, 4vw, 4.7rem);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.statementDescription {
+    padding-top: 24px;
+}
+
+.statementDescription p {
+    max-width: 360px;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #a99b8d;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 105px 0 70px;
+    }
+
+    .introLabel {
+        padding-top: 0;
+    }
+
+    .introContent h2 {
+        font-size: clamp(3rem, 8vw, 5.5rem);
+    }
+
+    .expandWrapper {
+        height: 90vh;
+        min-height: 580px;
+    }
+
+    .bottomStatement {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 100px 0 120px;
+    }
+
+    .statementDescription {
+        padding-top: 0;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .intro {
+        width: 90%;
+        padding: 85px 0 55px;
+    }
+
+    .introLabel {
+        font-size: 9px;
+    }
+
+    .introContent h2 {
+        font-size: clamp(2.7rem, 12vw, 4.4rem);
+    }
+
+    .description {
+        max-width: 400px;
+        margin-top: 24px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .expandWrapper {
+        height: 88vh;
+        min-height: 540px;
+    }
+
+    .expandWrapper :global(.scroll-expand__title) {
+        padding-inline: 8%;
+        font-size: clamp(2.2rem, 10vw, 4rem);
+    }
+
+    .expandWrapper :global(.scroll-expand__hint) {
+        bottom: 22px;
+        font-size: 8px;
+    }
+
+    .imageContent {
+        padding: 25px;
+    }
+
+    .imageTop {
+        font-size: 7px;
+    }
+
+    .imageCenter {
+        padding: 0 10px;
+    }
+
+    .imageLabel {
+        margin-bottom: 13px;
+        font-size: 8px;
+        letter-spacing: 0.16em;
+    }
+
+    .imageCenter h3 {
+        font-size: clamp(2.4rem, 12vw, 4rem);
+    }
+
+    .imageCenter p {
+        margin: 16px 0 20px;
+        font-size: 12px;
+    }
+
+    .imageButton {
+        min-height: 45px;
+        padding: 0 18px;
+        font-size: 0.75rem;
+    }
+
+    .imageBottom {
+        padding-top: 14px;
+    }
+
+    .imageBottom span {
+        font-size: 7px;
+        letter-spacing: 0.15em;
+    }
+
+    .bottomStatement {
+        width: 90%;
+        padding: 85px 0 100px;
+    }
+
+    .statementText h3 {
+        margin-top: 15px;
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .statementDescription p {
+        max-width: 400px;
+        font-size: 13px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+
+    .intro {
+        padding-top: 75px;
+    }
+
+    .expandWrapper {
+        min-height: 500px;
+    }
+
+    .imageContent {
+        padding: 20px;
+    }
+
+    .imageBottom span {
+        font-size: 6px;
+    }
+
+    .bottomStatement {
+        padding-bottom: 85px;
+    }
+
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .imageButton {
+        transition: none;
+    }
+
+    .imageButton:hover {
+        transform: none;
+    }
+
+}

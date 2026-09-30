@@ -1,0 +1,322 @@
+.header {
+    height: 76px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 28px;
+    border-bottom: 1px solid #332c26;
+    color: #f8f1e8;
+    background: #171411;
+    box-shadow: 0 4px 20px rgba(20, 15, 11, 0.12);
+    animation: headerAppear 0.45s ease both;
+}
+
+.headerLeft {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.brandBlock {
+    min-width: 0;
+}
+
+.brandRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brandRow h1 {
+    margin: 0;
+    color: #f7efe4;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.brandDivider {
+    width: 1px;
+    height: 19px;
+    background: #51463c;
+}
+
+.panelBadge {
+    color: #c99762;
+    font-family: 'Manrope', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+}
+
+.brandBlock p {
+    margin: 7px 0 0;
+    color: #9c9084;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.storeStatus {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.statusDot {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #405244;
+    border-radius: 50%;
+    color: #79a982;
+    background: #202c23;
+}
+
+.storeStatus > div,
+.dateInfo > div,
+.adminInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.statusLabel,
+.dateLabel,
+.adminLabel {
+    color: #766b61;
+    font-family: 'Manrope', sans-serif;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    line-height: 1.2;
+}
+
+.statusText {
+    margin-top: 2px;
+    color: #d7e3d9;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.infoDivider {
+    width: 1px;
+    height: 31px;
+    background: #39322c;
+}
+
+.dateInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dateInfo > svg {
+    color: #b88758;
+}
+
+.dateText {
+    margin-top: 2px;
+    color: #d5ccc3;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.adminProfile {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 9px 5px 5px;
+    border: 1px solid #3a332d;
+    border-radius: 11px;
+    background: #1d1916;
+    transition: all 0.25s ease;
+}
+
+.adminProfile:hover {
+    border-color: #55483d;
+    background: #211c18;
+}
+
+.adminAvatar {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8d653f;
+    border-radius: 9px;
+    color: #e8c59f;
+    background: #30251c;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.adminName {
+    max-width: 120px;
+    margin-top: 2px;
+    overflow: hidden;
+    color: #eee5db;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.adminShield {
+    margin-left: 2px;
+    color: #bd8957;
+}
+
+.logoutButton {
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 13px;
+    border: 1px solid #463b32;
+    border-radius: 9px;
+    color: #cfc4ba;
+    background: #1c1815;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.logoutButton svg {
+    color: #b88758;
+    transition: transform 0.25s ease;
+}
+
+.logoutButton:hover {
+    border-color: #8d633e;
+    color: #f2e8dc;
+    background: #28211b;
+    transform: translateY(-1px);
+}
+
+.logoutButton:hover svg {
+    transform: translateX(2px);
+}
+
+@keyframes headerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 0 22px;
+    }
+
+    .dateInfo,
+    .infoDivider:nth-of-type(2) {
+        display: none;
+    }
+
+    .headerRight {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        height: 70px;
+        padding: 0 18px;
+    }
+
+    .brandRow h1 {
+        font-size: 19px;
+    }
+
+    .brandBlock p {
+        display: none;
+    }
+
+    .panelBadge {
+        font-size: 8px;
+    }
+
+    .storeStatus {
+        display: none;
+    }
+
+    .infoDivider {
+        display: none;
+    }
+
+    .adminName {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 0 14px;
+    }
+
+    .brandDivider,
+    .panelBadge {
+        display: none;
+    }
+
+    .brandRow h1 {
+        font-size: 18px;
+    }
+
+    .adminProfile {
+        padding-right: 5px;
+        border: 0;
+        background: transparent;
+    }
+
+    .adminInfo,
+    .adminShield {
+        display: none;
+    }
+
+    .adminAvatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logoutButton {
+        width: 35px;
+        padding: 0;
+    }
+
+    .logoutButton span {
+        display: none;
+    }
+}

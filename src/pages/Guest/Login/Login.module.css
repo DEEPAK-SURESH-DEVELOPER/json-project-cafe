@@ -1,0 +1,517 @@
+.loginPage {
+    position: relative;
+    min-height: 100svh;
+    width: 100%;
+    overflow: hidden;
+    background: #17120f;
+    color: #fff8ef;
+}
+
+/* ==================== BACKGROUND ==================== */
+
+.background {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../../assets/hero-coffee.jpg');
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.04);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 18, 15, 0.88) 0%,
+            rgba(23, 18, 15, 0.76) 45%,
+            rgba(23, 18, 15, 0.68) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(23, 18, 15, 0.58),
+            rgba(23, 18, 15, 0.22)
+        );
+}
+
+/* ==================== PAGE CONTENT ==================== */
+
+.pageContent {
+    position: relative;
+    z-index: 2;
+    width: min(1400px, 100%);
+    min-height: 100svh;
+    margin: 0 auto;
+    padding: 38px 6vw 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== LOGO ==================== */
+
+.logo {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: #fff8ef;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.logoText {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.logoText span {
+    color: #fff8ef;
+    font-weight: 500;
+}
+
+.logoText strong {
+    color: #e3ae78;
+    font-weight: 600;
+}
+
+/* ==================== MAIN GRID ==================== */
+
+.contentGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 100px;
+    padding: 60px 0;
+}
+
+/* ==================== INTRO ==================== */
+
+.intro {
+    max-width: 680px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 25px;
+    color: #a87548;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+}
+
+.intro h1 {
+    margin: 0;
+    color: #fff8ef;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 7vw, 7.8rem);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.intro h1 em {
+    color: #e3ae78;
+    font-weight: 400;
+}
+
+.intro > p {
+    max-width: 500px;
+    margin: 34px 0 0;
+    color: rgba(255, 248, 239, 0.62);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.introFooter {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 45px;
+}
+
+.introFooter span {
+    width: 55px;
+    height: 1px;
+    background: rgba(227, 174, 120, 0.55);
+}
+
+.introFooter small {
+    color: rgba(255, 248, 239, 0.35);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+/* ==================== LOGIN CARD ==================== */
+
+.loginCard {
+    width: 100%;
+    max-width: 480px;
+    justify-self: end;
+    padding: 38px;
+    background: rgba(23, 18, 15, 0.57);
+    border: 1px solid rgba(255, 248, 239, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+/* ==================== CARD HEADER ==================== */
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(227, 174, 120, 0.35);
+    color: #e3ae78;
+}
+
+.cardHeader > div:last-child > span {
+    display: block;
+    margin-bottom: 4px;
+    color: #a87548;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.cardHeader h2 {
+    margin: 0;
+    color: #fff8ef;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.cardDescription {
+    margin: 23px 0 30px;
+    color: rgba(255, 248, 239, 0.5);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+/* ==================== FORM ==================== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.inputGroup label {
+    color: rgba(255, 248, 239, 0.72);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.inputWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputWrap svg {
+    position: absolute;
+    left: 15px;
+    color: rgba(227, 174, 120, 0.65);
+    pointer-events: none;
+}
+
+.inputWrap input {
+    width: 100%;
+    height: 52px;
+    padding: 0 15px 0 45px;
+    border: 1px solid rgba(255, 248, 239, 0.13);
+    outline: none;
+    background: rgba(255, 248, 239, 0.045);
+    color: #fff8ef;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.inputWrap input::placeholder {
+    color: rgba(255, 248, 239, 0.3);
+}
+
+.inputWrap input:focus {
+    background: rgba(255, 248, 239, 0.065);
+    border-color: rgba(227, 174, 120, 0.55);
+    box-shadow: 0 0 0 3px rgba(227, 174, 120, 0.06);
+}
+
+/* ==================== MESSAGE ==================== */
+
+.message {
+    padding: 11px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+.error {
+    border-left: 2px solid #c77b61;
+    background: rgba(199, 123, 97, 0.08);
+    color: #dfaa95;
+}
+
+.success {
+    border-left: 2px solid #9cb681;
+    background: rgba(156, 182, 129, 0.08);
+    color: #b7cf9d;
+}
+
+/* ==================== LOGIN BUTTON ==================== */
+
+.loginButton {
+    width: 100%;
+    height: 52px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e3ae78;
+    background: #e3ae78;
+    color: #23160f;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.loginButton:hover {
+    background: #f0c18e;
+    border-color: #f0c18e;
+    transform: translateY(-2px);
+}
+
+/* ==================== REGISTER ==================== */
+
+.registerText {
+    margin-top: 28px;
+    padding-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 248, 239, 0.09);
+}
+
+.registerText span {
+    color: rgba(255, 248, 239, 0.4);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+}
+
+.registerText a {
+    color: #e3ae78;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.registerText a:hover {
+    color: #f0c18e;
+}
+
+/* ==================== BOTTOM ==================== */
+
+.bottomText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 248, 239, 0.07);
+}
+
+.bottomText span {
+    color: rgba(255, 248, 239, 0.28);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+}
+
+/* ==================== TABLET ==================== */
+
+@media (max-width: 1050px) {
+    .contentGrid {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 55px;
+    }
+
+    .intro h1 {
+        font-size: clamp(3.6rem, 7vw, 6rem);
+    }
+
+    .loginCard {
+        padding: 32px;
+    }
+}
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 800px) {
+    .loginPage {
+        min-height: 100svh;
+    }
+
+    .background {
+        background-position: center;
+    }
+
+    .overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(23, 18, 15, 0.82),
+                rgba(23, 18, 15, 0.94)
+            );
+    }
+
+    .pageContent {
+        padding: 25px 20px 22px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logoText {
+        font-size: 1.15rem;
+    }
+
+    .contentGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 45px;
+        padding: 70px 0 55px;
+    }
+
+    .intro {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .intro h1 {
+        font-size: clamp(3.3rem, 15vw, 5rem);
+    }
+
+    .intro > p {
+        max-width: 500px;
+        margin-top: 24px;
+        font-size: 0.86rem;
+    }
+
+    .introFooter {
+        margin-top: 28px;
+    }
+
+    .loginCard {
+        max-width: 100%;
+        padding: 28px 24px;
+        justify-self: auto;
+    }
+
+    .bottomText {
+        display: none;
+    }
+}
+
+/* ==================== SMALL MOBILE ==================== */
+
+@media (max-width: 450px) {
+    .pageContent {
+        padding: 20px 16px;
+    }
+
+    .contentGrid {
+        gap: 38px;
+        padding: 55px 0 40px;
+    }
+
+    .intro h1 {
+        font-size: 3.2rem;
+    }
+
+    .intro > p {
+        font-size: 0.82rem;
+    }
+
+    .loginCard {
+        padding: 24px 19px;
+    }
+
+    .cardHeader h2 {
+        font-size: 1.8rem;
+    }
+
+    .registerText {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .inputWrap input,
+    .loginButton,
+    .registerText a {
+        transition: none;
+    }
+}

@@ -1,0 +1,23 @@
+.adminLayout {
+    min-height: 100vh;
+    background: #f6f2eb;
+}
+
+.contentArea {
+    min-height: 100vh;
+    margin-left: 250px;
+}
+
+.mainContent {
+    padding: 24px 28px;
+}
+
+@media (max-width: 900px) {
+    .contentArea {
+        margin-left: 220px;
+    }
+
+    .mainContent {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,471 @@
+.profileContainer {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.pageHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 7px;
+    color: #b87942;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.pageHeader h1 {
+    color: #302a25;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.pageHeader p {
+    margin-top: 8px;
+    color: #918177;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.editButton {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 14px;
+    border: 1px solid #dfd3c7;
+    border-radius: 10px;
+    background: #fffdf9;
+    color: #8f5b36;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.editButton:hover {
+    border-color: #c8a27f;
+    background: #f7ede4;
+    transform: translateY(-1px);
+}
+
+.profileGrid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.profileCard,
+.detailsCard,
+.securityCard {
+    border: 1px solid #e5dbd0;
+    border-radius: 17px;
+    background: #fffdf9;
+    box-shadow: 0 7px 25px rgba(55, 42, 32, 0.04);
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.profileHero {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 27px 23px;
+    background: #2a211b;
+    color: #fff;
+}
+
+.avatar {
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 3px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    background: #ead3bc;
+    color: #68462b;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.profileIdentity {
+    min-width: 0;
+}
+
+.profileIdentity h2 {
+    overflow: hidden;
+    color: #fffaf5;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.customerBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 4px 7px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.09);
+    color: #d9b18c;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.profileIdentity p {
+    overflow: hidden;
+    margin-top: 7px;
+    color: #a99a8e;
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.accountInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: auto;
+}
+
+.accountInfo > div {
+    padding: 18px 20px;
+    border-top: 1px solid #eee6de;
+}
+
+.accountInfo > div + div {
+    border-left: 1px solid #eee6de;
+}
+
+.accountInfo span {
+    display: block;
+    color: #a09287;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+}
+
+.accountInfo strong {
+    display: block;
+    margin-top: 5px;
+    color: #4b3d34;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.detailsCard {
+    padding: 23px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #eee6de;
+}
+
+.cardHeader span {
+    display: block;
+    color: #b87942;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+}
+
+.cardHeader h2 {
+    margin-top: 3px;
+    color: #3d332d;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.cardHeader > svg {
+    color: #b87942;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: 7px;
+    color: #5d4f45;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.inputWrapper,
+.inputWrapperDisabled {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 43px;
+    padding: 0 12px;
+    border: 1px solid #ded4c9;
+    border-radius: 10px;
+    background: #fffefa;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.inputWrapper:focus-within {
+    border-color: #c38b5b;
+    box-shadow: 0 0 0 3px rgba(184, 121, 66, 0.08);
+}
+
+.inputWrapperDisabled {
+    border-color: #ebe3db;
+    background: #faf7f3;
+}
+
+.inputWrapper svg,
+.inputWrapperDisabled svg {
+    flex-shrink: 0;
+    color: #aa9482;
+}
+
+.inputWrapper input,
+.inputWrapperDisabled input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #3d342e;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.inputWrapperDisabled input {
+    color: #685a50;
+}
+
+.inputWrapper input::placeholder {
+    color: #b4a69b;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #eee6de;
+}
+
+.cancelButton,
+.saveButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 13px;
+    border-radius: 9px;
+    font-size: 9px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cancelButton {
+    border: 1px solid #dfd4ca;
+    background: #fffdf9;
+    color: #817267;
+}
+
+.cancelButton:hover {
+    background: #f4ece5;
+}
+
+.saveButton {
+    background: #b87942;
+    color: #fff;
+    box-shadow: 0 5px 13px rgba(184, 121, 66, 0.16);
+}
+
+.saveButton:hover:not(:disabled) {
+    background: #9f6638;
+    transform: translateY(-1px);
+}
+
+.cancelButton:disabled,
+.saveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.successMessage,
+.errorMessage {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 13px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.successMessage {
+    background: #e9f2e8;
+    color: #557652;
+}
+
+.errorMessage {
+    background: #f8e9e5;
+    color: #985b4f;
+}
+
+.securityCard {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 18px;
+    padding: 17px 19px;
+}
+
+.securityIcon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #f1e5d9;
+    color: #a56839;
+}
+
+.securityContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.securityContent h2 {
+    color: #443830;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.securityContent p {
+    margin-top: 3px;
+    color: #998b80;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.logoutButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 11px;
+    border: 1px solid #eadbd1;
+    border-radius: 8px;
+    background: #fff9f5;
+    color: #9a5b4c;
+    font-size: 9px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.logoutButton:hover {
+    border-color: #d8b7a8;
+    background: #f7e9e2;
+}
+
+@media (max-width: 850px) {
+    .profileGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .profileCard {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .pageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pageHeader h1 {
+        font-size: 35px;
+    }
+
+    .editButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profileHero {
+        padding: 22px 18px;
+    }
+
+    .detailsCard {
+        padding: 18px;
+    }
+
+    .securityCard {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .securityContent {
+        width: calc(100% - 52px);
+    }
+
+    .logoutButton {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .accountInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .accountInfo > div + div {
+        border-top: 1px solid #eee6de;
+        border-left: 0;
+    }
+}

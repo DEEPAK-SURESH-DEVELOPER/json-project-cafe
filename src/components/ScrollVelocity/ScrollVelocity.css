@@ -1,0 +1,41 @@
+.parallax {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroller {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 8vw, 8rem);
+    line-height: 0.9;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+    color: #fffaf2;
+    will-change: transform;
+}
+
+.scroller span {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .scroller {
+        font-size: clamp(3rem, 14vw, 6rem);
+    }
+}
+
+@media (max-width: 450px) {
+    .scroller {
+        font-size: 3.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroller {
+        transform: none !important;
+    }
+}

@@ -1,0 +1,249 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid #e8dfd5;
+    background: rgba(255, 253, 249, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.greeting {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.greeting span {
+    color: #8b7b6e;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.greeting strong {
+    color: #302a25;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.divider {
+    width: 1px;
+    height: 25px;
+    margin: 0 20px;
+    background: #e4d9ce;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #907d6d;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.welcome svg {
+    color: #b87942;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.storeStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+}
+
+.statusIcon {
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e9f2e8;
+    color: #62855d;
+}
+
+.statusLabel {
+    display: block;
+    color: #a09287;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    line-height: 1;
+}
+
+.statusText {
+    display: block;
+    margin-top: 3px;
+    color: #52664e;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.cartButton,
+.profileButton,
+.logoutButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cartButton {
+    position: relative;
+    gap: 8px;
+    min-height: 39px;
+    padding: 0 12px;
+    border: 1px solid #e4d9ce;
+    border-radius: 11px;
+    background: #fffaf5;
+    color: #594a3f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cartButton:hover {
+    border-color: #d6b08a;
+    background: #f7ede3;
+    color: #8b572f;
+    transform: translateY(-1px);
+}
+
+.cartBadge {
+    min-width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    border-radius: 20px;
+    background: #b87942;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.profileButton {
+    gap: 7px;
+    min-height: 39px;
+    padding: 0 12px;
+    border-radius: 11px;
+    background: transparent;
+    color: #66584e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.profileButton:hover {
+    background: #eee5dc;
+    color: #8b572f;
+}
+
+.logoutButton {
+    width: 39px;
+    height: 39px;
+    border-radius: 11px;
+    background: transparent;
+    color: #8d7d71;
+}
+
+.logoutButton:hover {
+    background: #f2e6dd;
+    color: #9a5638;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1100px) {
+    .welcome {
+        display: none;
+    }
+
+    .divider {
+        margin: 0 13px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 0 22px;
+    }
+
+    .storeStatus {
+        display: none;
+    }
+
+    .headerLeft .divider {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        height: 64px;
+        padding: 0 16px;
+    }
+
+    .greeting {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+    }
+
+    .greeting span {
+        font-size: 10px;
+    }
+
+    .greeting strong {
+        font-size: 14px;
+    }
+
+    .profileButton span {
+        display: none;
+    }
+
+    .profileButton {
+        width: 37px;
+        height: 37px;
+        padding: 0;
+    }
+
+    .cartButton {
+        width: 37px;
+        height: 37px;
+        min-height: 37px;
+        padding: 0;
+    }
+
+    .cartButton span:not(.cartBadge) {
+        display: none;
+    }
+
+    .logoutButton {
+        width: 37px;
+        height: 37px;
+    }
+}
