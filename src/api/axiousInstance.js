@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiousInstance = axios.create({
-    baseURL: 'http://localhost:4444',
+    baseURL: 'https://json-project-cafe-server.onrender.com',
     timeout: 5000
 })
 
