@@ -1,7 +1,7 @@
 import apiServices from '../api/apiServices'
 
 
-// ==================== Guest Home ====================
+// Guest Home
 
 export const getAllProductsAPI = async () => {
     return await apiServices('GET', '/products', {})
@@ -12,7 +12,7 @@ export const getAllCategoriesAPI = async () => {
 }
 
 
-// ==================== Guest Login & Register ====================
+// Guest Login & Register
 
 export const getUserByEmailAPI = async (email) => {
     return await apiServices('GET', `/users?email=${email}`, {})
@@ -31,21 +31,21 @@ export const loginUserAPI = async (email, password) => {
 }
 
 
-// ==================== Guest Cart / User Checkout ====================
+// Guest Cart / User Checkout
 
 export const addOrderAPI = async (orderData) => {
     return await apiServices('POST', '/orders', orderData)
 }
 
 
-// ==================== User Orders ====================
+// User Orders
 
 export const getUserOrdersAPI = async (userId) => {
     return await apiServices('GET', `/orders?userId=${userId}`, {})
 }
 
 
-// ==================== Admin Products ====================
+// Admin Products
 
 export const addProductAPI = async (productData) => {
     return await apiServices('POST', '/products', productData)
@@ -60,7 +60,7 @@ export const deleteProductAPI = async (id) => {
 }
 
 
-// ==================== Admin Orders ====================
+// Admin Orders
 
 export const getAllOrdersAPI = async () => {
     return await apiServices('GET', '/orders', {})
@@ -71,7 +71,7 @@ export const updateOrderAPI = async (id, orderData) => {
 }
 
 
-// ==================== Admin Users ====================
+// Admin Users
 
 export const getAllUsersAPI = async () => {
     return await apiServices('GET', '/users', {})

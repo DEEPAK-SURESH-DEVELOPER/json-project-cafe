@@ -19,6 +19,8 @@ function UserHeader() {
 
     const getGreeting = () => {
         const hour = new Date().getHours()
+        // console.log(hour);
+        
 
         if (hour < 12) {
             return 'Good morning'
@@ -62,9 +64,9 @@ function UserHeader() {
                         <span className={styles.statusLabel}>STORE</span>
                         <span className={styles.statusText}>Open now</span>
                     </div>
-                </div>
+                </div> 
 
-                <div className={styles.divider}></div>
+                 <div className={styles.divider}></div> 
 
                 <button
                     type="button"
